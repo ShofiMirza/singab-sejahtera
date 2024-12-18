@@ -264,8 +264,8 @@
     // Tampilkan markers
     var keluarga = @json($keluarga);
     keluarga.forEach(function(k) {
-        var color = k.status_bantuan == 'Sudah Dibantu' ? '#2563eb' : 
-                    k.status_bantuan == 'Sedang Diproses' ? '#0ea5e9' : '#38bdf8';
+        var color = k.status_bantuan == 'Sudah Dibantu' ? '#06b6d4' : 
+                    k.status_bantuan == 'Sedang Diproses' ? '#8b5cf6' : '#f97316';
                     
         var marker = L.marker([k.latitude, k.longitude], {
             icon: L.divIcon({
@@ -295,9 +295,9 @@
             datasets: [{
                 data: [{{ $belumDibantu }}, {{ $sedangDiproses }}, {{ $sudahDibantu }}],
                 backgroundColor: [
-                    '#38bdf8', // light blue
-                    '#0ea5e9', // medium blue
-                    '#2563eb'  // dark blue
+                    '#f97316', // orange
+                    '#8b5cf6', // purple
+                    '#06b6d4'  // cyan
                 ],
                 borderWidth: 1
             }]
@@ -306,7 +306,13 @@
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'bottom'
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                            size: 12
+                        }
+                    }
                 }
             }
         }
