@@ -34,7 +34,7 @@ input[type=number] {
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Alamat</label>
+                        <label class="form-label">Patokan Rumah</label>
                         <textarea class="form-control @error('alamat') is-invalid @enderror" 
                             name="alamat" rows="3">{{ old('alamat', $keluarga->alamat) }}</textarea>
                         @error('alamat')

@@ -16,9 +16,8 @@ return new class extends Migration
             $table->string('rw', 3);
             $table->decimal('latitude', 10, 8);
             $table->decimal('longitude', 11, 8);
-            $table->enum('kategori', ['Sangat Miskin', 'Miskin', 'Rentan Miskin']);
-            $table->enum('kondisi_rumah', ['Rusak Berat', 'Sedang', 'Baik']);
-            $table->enum('status_bantuan', ['Belum Dibantu', 'Sedang Diproses', 'Sudah Dibantu'])->default('Belum Dibantu');
+            $table->string('kategori');
+            $table->string('status_bantuan')->default('Belum Dibantu');
             $table->timestamps();
         });
     }

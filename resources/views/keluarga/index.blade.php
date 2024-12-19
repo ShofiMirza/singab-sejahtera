@@ -35,10 +35,9 @@
                                 <th>No</th>
                                 <th>ID</th>
                                 <th>Nama KK</th>
-                                <th>Alamat</th>
+                                <th>Patokan Rumah</th>
                                 <th>RT/RW</th>
                                 <th>Kategori</th>
-                                <th>Kondisi Rumah</th>
                                 <th>Status Bantuan</th>
                                 <th>Aksi</th>
                             </tr>
@@ -52,7 +51,6 @@
                                 <td>{{ $k->alamat }}</td>
                                 <td>{{ $k->rt }}/{{ $k->rw }}</td>
                                 <td>{{ $k->kategori }}</td>
-                                <td>{{ $k->kondisi_rumah }}</td>
                                 <td>
                                     <a href="{{ route('detail-bantuan.index', $k->id) }}">{{ $k->status_bantuan }}</a>
                                 </td>

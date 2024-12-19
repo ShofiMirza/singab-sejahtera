@@ -86,13 +86,14 @@
                     </li>
                     @if(auth()->user()->role == 'Admin')
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('keluarga.*') ? 'active' : '' }}" href="{{ route('keluarga.index') }}">Data Keluarga</a>
+                        <a class="nav-link {{ request()->routeIs('keluarga.*') ? 'active' : '' }}" href="{{ route('keluarga.index') }}">
+                            <i class="fas fa-users me-2"></i>Data Keluarga
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{ route('users.index') }}">Data User</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('detail-bantuan.history') ? 'active' : '' }}" href="{{ route('detail-bantuan.history') }}">Riwayat Pembangunan</a>
+                        <a class="nav-link {{ request()->routeIs('detail-bantuan.history') ? 'active' : '' }}" href="{{ route('detail-bantuan.history') }}">
+                            <i class="fas fa-history me-2"></i>Riwayat Pembangunan
+                        </a>
                     </li>
                     @endif
                 </ul>
