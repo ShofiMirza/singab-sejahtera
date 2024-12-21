@@ -6,6 +6,7 @@
 
 ##### *database: singab_sejahtera
 ##### *email: admin@singab.com , password: admin123
+##### *proyek menggunakan laravel 9 + mysql, tanpa npm
 ##### *sebelum melakukan composer install, pastikan anda menghapus file "composer.lock" terlebih dahulu
 
 ### DESKRIPSI SINGKAT
